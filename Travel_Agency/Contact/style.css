@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+section{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 745px;
+    background-color: #202020;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #03a9f4;
+}
+section .container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+section .container .contactinfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #202020;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section .container .contactinfo h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+section .container .contactinfo .info{
+    position: relative;
+    margin: 60px 0;
+}
+section .container .contactinfo .info li{
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+section .container .contactinfo .info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+section .container .contactinfo .info li span:nth-child(1) img{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5 ;
+}
+section .container .contactinfo .info li span:nth-child(2){
+    color: white;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+section .container .contactinfo .info li:hover span:nth-child(1) img, 
+section .container .contactinfo .info li:hover span:nth-child(2){
+    opacity: 1;
+}
+
+section .container .contactinfo .sci{ 
+    position: relative;
+    display: flex;
+    margin-left: 200px;
+}
+section .container .contactinfo .sci li{
+    list-style: none;
+    margin-right: 15px;
+} 
+section .container .contactinfo .sci li a{
+    text-decoration: none;
+} 
+section .container .contactform{
+    position: absolute;
+    padding: 50px 40px 70px 40px;
+    margin-left: 350px;
+    padding-left: 350px;
+    width: calc(100% - 350px);
+    color: white;
+    height: 100%;
+}
+section .container .contactform h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+section .container .contactform .formbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+section .container .contactform .formbox .inputBOx {
+    position: relative;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+section .container .contactform .formbox .inputBOx input, textarea{
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    resize: none;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+section .container .contactform .formbox .inputBOx span{
+    position: absolute;
+    left: 0;
+    color: black;
+    padding-top: 7px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+section .container .contactform .formbox .inputBOx input:focus~span,
+section .container .contactform .formbox .inputBOx textarea:focus~span,
+section .container .contactform .formbox .inputBOx input:valid~span,
+section .container .contactform .formbox .inputBOx textarea:valid~span
+{
+    transform: translateY(-30px);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: red;
+}
+section .container .contactform .formbox .inputBOx input[type="submit"]{
+    cursor: pointer;
+    background-color: #202020;
+    color: white;
+    border: 1px solid white;
+    width: 150px;
+}
